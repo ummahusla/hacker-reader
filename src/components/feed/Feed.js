@@ -29,18 +29,29 @@ class Feed extends Component {
   render() {
 
     const topStoryIds = this.state.topStoryIds;
-    
+
+    const topStoryList = topStoryIds.map((storyId) => {
+      return (
+        <li key={storyId}>{ storyId }</li>
+      );
+    });
+
     return (
       <div>
           <Navigation />
           <div className="container">
             <div className="row">
               <div className="col-12">
-                { topStoryIds }
+                <div>
+                  <ul>
+                    { topStoryList }
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
       </div>
+
     );
   }
 }
