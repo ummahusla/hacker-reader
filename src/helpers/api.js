@@ -12,5 +12,6 @@ export function getBestStories() {
   return axios.get('https://hacker-news.firebaseio.com/v0/beststories.json?print=pretty');
 }
 
+export function getStoryItem(storyId) {
   return axios.get('https://hacker-news.firebaseio.com/v0/item/' + storyId + '.json?print=pretty');
 }

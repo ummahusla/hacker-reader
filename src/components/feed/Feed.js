@@ -36,6 +36,8 @@ class Feed extends Component {
       );
     });
 
+    console.log(api.getStoryItem(13344477));
+
     return (
       <div>
           <Navigation />
