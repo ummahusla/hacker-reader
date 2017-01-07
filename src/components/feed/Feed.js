@@ -4,15 +4,6 @@ import './Feed.css';
 
 import * as api from '../../helpers/api';
 
-api.getTopStories()
-  .then((response) => {
-    if(response.data) {
-       var topStoryIds = response.data;
-       this.setState({ topStoryIds: topStoryIds });
-    }
-    console.log(response.data);
-});
-
 class Feed extends Component {
 
   constructor(props) {
@@ -22,19 +13,40 @@ class Feed extends Component {
     };
   }
 
+  loadTopStoriesIds() {
+    api.getTopStories()
+      .then((response) => {
+        if(response.data) {
+         this.setState({ topStoryIds: response.data });
+        }
+    });
+  }
+
+  componentDidMount() {
+    this.loadTopStoriesIds();
+  }
+
   render() {
+
+    const topStoryIds = this.state.topStoryIds;
+    
     return (
       <div>
-
-        <Navigation />
-
-         <div>
-           <pre>{this.state.topStoryIds}</pre>
-         </div>
-
+          <Navigation />
+          <div className="container">
+            <div className="row">
+              <div className="col-12">
+                { topStoryIds }
+              </div>
+            </div>
+          </div>
       </div>
     );
   }
 }
+
+Feed.propTypes = {
+  topStoryIds: React.PropTypes.array
+};
 
 export default Feed;

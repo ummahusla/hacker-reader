@@ -1,3 +1,7 @@
+body {
+    padding-top: 65px !important; 
+}
+
 .App {
   text-align: center;
 }
