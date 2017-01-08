@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Navigation from '../navigation/Navigation';
+import Story from '../story/Story';
 import './Feed.css';
 
 import * as api from '../../helpers/api';
@@ -36,22 +37,12 @@ class Feed extends Component {
       );
     });
 
-    console.log(api.getStoryItem(13344477));
+    // console.log(api.getStoryItem(13344477));
 
     return (
       <div>
           <Navigation />
-          <div className="container">
-            <div className="row">
-              <div className="col-12">
-                <div>
-                  <ul>
-                    { topStoryList }
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
+          <Story topStoryList={topStoryList} />
       </div>
 
     );
