@@ -9,7 +9,7 @@ const Story = (props) => (
           <div>
             <h1>{ props.storyTitle } </h1>
             <ul>
-              { props.topStoryList }
+              { props.storyList }
             </ul>
           </div>
         </div>
@@ -20,7 +20,7 @@ const Story = (props) => (
 
 Story.propTypes = {
   storyTitle: React.PropTypes.string,
-  topStoryList: React.PropTypes.array
+  storyList: React.PropTypes.array
 };
 
 export default Story;
