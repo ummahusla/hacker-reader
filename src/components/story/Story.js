@@ -2,6 +2,7 @@ import React from 'react';
 import './Story.css';
 
 const Story = (props) => {
+  
   const topStoryList = props.storyList.map((storyId) => {
     return (
       <li key={storyId}>{ storyId }</li>
