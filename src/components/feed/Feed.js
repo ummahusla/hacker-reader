@@ -42,7 +42,7 @@ class Feed extends Component {
     return (
       <div>
           <Navigation />
-          <Story topStoryList={topStoryList} />
+          <Story storyTitle="Top Stories" topStoryList={topStoryList} />
       </div>
 
     );

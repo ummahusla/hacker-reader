@@ -7,6 +7,7 @@ const Story = (props) => (
       <div className="row">
         <div className="col-12">
           <div>
+            <h1>{ props.storyTitle } </h1>
             <ul>
               { props.topStoryList }
             </ul>
@@ -18,6 +19,7 @@ const Story = (props) => (
 );
 
 Story.propTypes = {
+  storyTitle: React.PropTypes.string,
   topStoryList: React.PropTypes.array
 };
 
