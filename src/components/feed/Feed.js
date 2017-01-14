@@ -31,18 +31,12 @@ class Feed extends Component {
 
     const topStoryIds = this.state.topStoryIds;
 
-    const topStoryList = topStoryIds.map((storyId) => {
-      return (
-        <li key={storyId}>{ storyId }</li>
-      );
-    });
-
     // console.log(api.getStoryItem(13344477));
 
     return (
       <div>
           <Navigation />
-          <Story storyTitle="Top Stories" storyList={topStoryList} />
+          <Story storyTitle="Top Stories" storyList={topStoryIds} />
       </div>
 
     );
