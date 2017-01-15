@@ -28,14 +28,11 @@ class Feed extends Component {
   }
 
   render() {
-    // console.log(api.getStoryItem(13344477));
-
     return (
       <div>
           <Navigation />
           <Story storyTitle="Top Stories" storyList={this.state.topStoryIds} />
       </div>
-
     );
   }
 }

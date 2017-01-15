@@ -1,4 +1,5 @@
 import React, { Component }  from 'react';
+import { Button } from 'react-bootstrap';
 import './StoryItem.css';
 
 import * as api from '../../helpers/api';
@@ -16,7 +17,6 @@ class StoryItem extends Component {
     api.getStoryItem(this.props.storyId)
       .then((response) => {
         if(response.data) {
-          console.log(response.data);
           this.setState({ storyItems: response.data });
         }
     });
@@ -28,25 +28,18 @@ class StoryItem extends Component {
 
   render() {
 
-    const storyItems = this.state.storyItems.map((item) => {
-      return (
-        <div>
-          { item.title }
-        </div>
-      );
-    });
-
-    console.log(storyItems);
+    const storyItem = this.state.storyItems;
 
     return (
       <div>
         <ul>
           <li>
-            { this.props.storyId }
+            <strong>{ storyItem.score }</strong> <Button href={storyItem.url} bsStyle="link">{ storyItem.title }</Button>
           </li>
         </ul>
       </div>
     );
+    
   }
 
 }
