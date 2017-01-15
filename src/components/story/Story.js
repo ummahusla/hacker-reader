@@ -1,11 +1,12 @@
 import React from 'react';
+import StoryItem from '../storyItem/StoryItem';
 import './Story.css';
 
 const Story = (props) => {
-  
+
   const topStoryList = props.storyList.map((storyId) => {
     return (
-      <li key={storyId}>{ storyId }</li>
+      <StoryItem key={storyId} storyId={storyId}/>
     );
   });
 
@@ -15,10 +16,8 @@ const Story = (props) => {
         <div className="row">
           <div className="col-12">
             <div>
-              <h1>{ props.storyTitle } </h1>
-              <ul>
-                { topStoryList ? topStoryList : "No stories found" }
-              </ul>
+              <h1>{ props.storyTitle }</h1>
+              {topStoryList}
             </div>
           </div>
         </div>
