@@ -1,5 +1,6 @@
 import React, { Component }  from 'react';
 import { Button } from 'react-bootstrap';
+import moment from 'moment';
 import './StoryItem.css';
 
 import * as api from '../../helpers/api';
@@ -29,17 +30,18 @@ class StoryItem extends Component {
   render() {
 
     const storyItem = this.state.storyItems;
-
+    const time = new Date(storyItem.time * 1000);
+    
     return (
       <div>
         <ul>
           <li>
-            <strong>{ storyItem.score }</strong> <Button href={storyItem.url} bsStyle="link">{ storyItem.title }</Button>
+            <strong>{storyItem.score}</strong> <Button href={storyItem.url} bsStyle="link">{storyItem.title}</Button> by {storyItem.by} {moment(time).fromNow()}
           </li>
         </ul>
       </div>
     );
-    
+
   }
 
 }
