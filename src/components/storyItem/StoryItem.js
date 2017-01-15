@@ -1,40 +1,58 @@
-import React from 'react';
+import React, { Component }  from 'react';
 import './StoryItem.css';
 
 import * as api from '../../helpers/api';
 
-const StoryItem = (props) => {
+class StoryItem extends Component {
 
-  let id, time, score, url, title, author;
+  constructor(props) {
+    super(props);
+    this.state = {
+      storyItems: []
+    };
+  }
 
-  if(props.storyId !== "") {
-    api.getStoryItem(props.storyId)
+  loadStoryItems() {
+    api.getStoryItem(this.props.storyId)
       .then((response) => {
         if(response.data) {
-          id = response.data.id;
-          time = response.data.time;
-          score = response.data.score;
-          url = response.data.url;
-          title = response.data.title;
-          author = response.data.by;
+          console.log(response.data);
+          this.setState({ storyItems: response.data });
         }
     });
   }
 
-  return (
-    <div>
-      <ul>
-        <li>
-          {props.storyId} {title}
-        </li>
-      </ul>
-    </div>
-  );
+  componentDidMount() {
+    this.loadStoryItems();
+  }
 
-};
+  render() {
+
+    const storyItems = this.state.storyItems.map((item) => {
+      return (
+        <div>
+          { item.title }
+        </div>
+      );
+    });
+
+    console.log(storyItems);
+
+    return (
+      <div>
+        <ul>
+          <li>
+            { this.props.storyId }
+          </li>
+        </ul>
+      </div>
+    );
+  }
+
+}
 
 StoryItem.propTypes = {
-   storyId: React.PropTypes.number,
+   storyId: React.PropTypes.number
 };
 
 export default StoryItem;
