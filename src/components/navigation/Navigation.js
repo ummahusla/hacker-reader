@@ -1,5 +1,7 @@
 import React from 'react';
-import { Grid, Navbar, Nav, NavItem } from 'react-bootstrap';
+import { Link } from 'react-router'
+import { LinkContainer } from 'react-router-bootstrap';
+import { Button, Grid, Navbar, Nav, NavItem } from 'react-bootstrap';
 import './Navigation.css';
 
 const Navigation = () => (
@@ -13,10 +15,10 @@ const Navigation = () => (
                 <Navbar.Toggle />
             </Navbar.Header>
             <Nav>
-              <NavItem eventKey={1} href="#">New</NavItem>
-              <NavItem eventKey={2} href="#">Top</NavItem>
-              <NavItem eventKey={2} href="#">Best</NavItem>
-              <NavItem eventKey={2} href="#">Jobs</NavItem>
+              <NavItem eventKey={2} href="/top">Top</NavItem>
+              <NavItem eventKey={2} href="/new">New</NavItem>
+              <NavItem eventKey={2} href="/best">Best</NavItem>
+              <NavItem eventKey={2} href="/jobs">Jobs</NavItem>
             </Nav>
             <Nav pullRight>
               <NavItem eventKey={2} href="#">GitHub</NavItem>
