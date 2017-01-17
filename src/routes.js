@@ -1,11 +1,14 @@
 import React from 'react';
 import { Router, Route, Link, IndexRedirect, IndexRoute, browserHistory } from 'react-router';
-import Feed from '/components/feed/Feed';
-import NewStories from '/components/newstories/NewStories';
+import Feed from './components/feed/Feed';
+import NewStories from './components/newStories/NewStories';
 
-export default (
-  <Router history={ browserHistory }>
-    <Route path="/top" component={Feed}></Route>
-    <Route path="/new" component={NewStories}></Route>
+const Routes = (props) => (
+  <Router {...props}>
+    <Route path="/" component={Feed} />
+    <Route path="/top" component={Feed} />
+    <Route path="/new" component={NewStories} />
   </Router>
 );
+
+export default Routes;
