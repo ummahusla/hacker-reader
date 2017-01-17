@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import Navigation from '../navigation/Navigation';
 import Story from '../story/Story';
-import './Feed.css';
+import './TopStories.css';
 
 import * as api from '../../helpers/api';
 
-class Feed extends Component {
+class TopStories extends Component {
 
   constructor(props) {
     super(props);
@@ -37,8 +37,8 @@ class Feed extends Component {
   }
 }
 
-Feed.propTypes = {
+TopStories.propTypes = {
   topStoryIds: React.PropTypes.array
 };
 
-export default Feed;
+export default TopStories;
