@@ -15,3 +15,11 @@ export function getBestStories() {
 export function getStoryItem(storyId) {
   return axios.get('https://hacker-news.firebaseio.com/v0/item/' + storyId + '.json?print=pretty');
 }
+
+export function getJobStories() {
+  return axios.get('https://hacker-news.firebaseio.com/v0/jobstories.json?print=pretty');
+}
+
+export function getJobItem(jobStoryId) {
+  return axios.get('https://hacker-news.firebaseio.com/v0/item/' + jobStoryId + '.json?print=pretty');
+}
