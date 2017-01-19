@@ -19,7 +19,7 @@ const Navigation = () => (
               <NavItem eventKey={2} href="/jobs">Jobs</NavItem>
             </Nav>
             <Nav pullRight>
-              <NavItem eventKey={2} href="#">GitHub</NavItem>
+              <NavItem eventKey={2} href="https://github.com/ummahusla/Hacker-Reader">GitHub</NavItem>
             </Nav>
         </Grid>
     </Navbar>
