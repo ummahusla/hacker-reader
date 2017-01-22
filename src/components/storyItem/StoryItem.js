@@ -31,12 +31,12 @@ class StoryItem extends Component {
 
     const storyItem = this.state.storyItems;
     const time = new Date(storyItem.time * 1000);
-    
+
     return (
       <div>
         <ul>
           <li>
-            <strong>{storyItem.score}</strong> <Button href={storyItem.url} bsStyle="link">{storyItem.title}</Button> by {storyItem.by} {moment(time).fromNow()}
+            <strong>{storyItem.score}</strong> <Button href={storyItem.url} bsStyle="link">{storyItem.title}</Button> by {storyItem.by} {moment(time).fromNow()} {storyItem.kids > 1 ? storyItem.kids + "comments" : storyItem.kids + "comment" }
           </li>
         </ul>
       </div>
