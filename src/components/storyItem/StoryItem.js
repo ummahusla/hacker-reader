@@ -1,5 +1,5 @@
 import React, { Component }  from 'react';
-import { Button } from 'react-bootstrap';
+import { Button, Label } from 'react-bootstrap';
 import moment from 'moment';
 import './StoryItem.css';
 
@@ -32,11 +32,19 @@ class StoryItem extends Component {
     const storyItem = this.state.storyItems;
     const time = new Date(storyItem.time * 1000);
 
+    let comments;
+
+    if (typeof storyItem.kids !== 'undefined') {
+      comments = storyItem.kids.length + ' comments';
+    } else {
+      comments = 'No comments yet';
+    }
+
     return (
       <div>
         <ul>
           <li>
-            <strong>{storyItem.score}</strong> <Button href={storyItem.url} bsStyle="link">{storyItem.title}</Button> by {storyItem.by} {moment(time).fromNow()} {storyItem.kids > 1 ? storyItem.kids + "comments" : storyItem.kids + "comment" }
+            <strong>{storyItem.score}</strong> <Button href={storyItem.url} bsStyle="link">{storyItem.title}</Button> by {storyItem.by} <small>{moment(time).fromNow()}</small> <Label>{comments}</Label>
           </li>
         </ul>
       </div>

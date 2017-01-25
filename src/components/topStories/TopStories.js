@@ -19,7 +19,7 @@ class TopStories extends Component {
       .then((response) => {
         if(response.data) {
          this.setState({ topStoryIds: response.data });
-        }
+       }
     });
   }
 
