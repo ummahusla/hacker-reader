@@ -4,7 +4,7 @@ import './Navigation.css';
 
 const Navigation = () => (
   <div>
-    <Navbar inverse fixedTop>
+    <Navbar className="navigation-bar" inverse fixedTop>
         <Grid>
             <Navbar.Header>
                 <Navbar.Brand>

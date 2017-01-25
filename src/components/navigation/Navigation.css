@@ -1,0 +1,11 @@
+.navigation-bar {
+  background-color: #f39c12;
+}
+
+.navbar-inverse {
+  background-image: none;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+  color: #222;
+}
