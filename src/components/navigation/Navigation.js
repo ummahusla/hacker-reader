@@ -8,7 +8,7 @@ const Navigation = () => (
         <Grid>
             <Navbar.Header>
                 <Navbar.Brand>
-                    <a href="/">HackerNews Reader</a>
+                    <a href="/"><i className="fa fa-hacker-news fa-lg" aria-hidden="true"></i> HackerNews Reader</a>
                 </Navbar.Brand>
                 <Navbar.Toggle />
             </Navbar.Header>

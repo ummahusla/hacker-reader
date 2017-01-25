@@ -42,9 +42,9 @@ class StoryItem extends Component {
 
     return (
       <div>
-        <ul>
+        <ul className="storyitem-list">
           <li>
-            <strong>{storyItem.score}</strong> <Button href={storyItem.url} bsStyle="link">{storyItem.title}</Button> by {storyItem.by} <small>{moment(time).fromNow()}</small> <Label>{comments}</Label>
+            <i className="fa fa-caret-square-o-up" aria-hidden="true"></i> {storyItem.score}<Button href={storyItem.url} bsStyle="link">{storyItem.title}</Button> <Label>{storyItem.by}</Label> <Label>{moment(time).fromNow()}</Label> <Label>{comments}</Label>
           </li>
         </ul>
       </div>

@@ -6,6 +6,11 @@
   background-image: none;
 }
 
-.navbar-inverse .navbar-nav > li > a {
+.navbar-inverse .navbar-brand, .navbar-inverse .navbar-nav > li > a {
   color: #222;
+  text-shadow: none;
+}
+
+.navbar-brand {
+  font-weight: bold;
 }
