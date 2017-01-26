@@ -1,27 +1,37 @@
 import React from 'react';
-import { Grid, Navbar, Nav, NavItem } from 'react-bootstrap';
+import { Navbar, Nav, NavItem, MenuItem, NavDropdown } from 'react-bootstrap';
+import { LinkContainer } from 'react-router-bootstrap';
 import './Navigation.css';
 
 const Navigation = () => (
-  <div>
-    <Navbar className="navigation-bar" inverse fixedTop>
-        <Grid>
-            <Navbar.Header>
-                <Navbar.Brand>
-                    <a href="/"><i className="fa fa-hacker-news fa-lg" aria-hidden="true"></i> HackerNews Reader</a>
-                </Navbar.Brand>
-                <Navbar.Toggle />
-            </Navbar.Header>
-            <Nav>
-              <NavItem eventKey={2} href="/top">Top</NavItem>
-              <NavItem eventKey={2} href="/new">New</NavItem>
-              <NavItem eventKey={2} href="/best">Best</NavItem>
-              <NavItem eventKey={2} href="/jobs">Jobs</NavItem>
-            </Nav>
-            <Nav pullRight>
-              <NavItem eventKey={2} href="https://github.com/ummahusla/Hacker-Reader">GitHub</NavItem>
-            </Nav>
-        </Grid>
+  <div className="container">
+    <Navbar fluid fixedTop>
+      <Navbar.Header>
+        <Navbar.Brand>
+          <i className="fa fa-hacker-news fa-lg" aria-hidden="true"></i> Hacker News Reader
+        </Navbar.Brand>
+      </Navbar.Header>
+      <Nav>
+        <LinkContainer to="/top">
+          <NavItem eventKey={1}>Top</NavItem>
+        </LinkContainer>
+        <LinkContainer to="/new">
+          <NavItem eventKey={2}>New</NavItem>
+        </LinkContainer>
+        <LinkContainer to="/best">
+          <NavItem eventKey={3}>Best</NavItem>
+        </LinkContainer>
+        <LinkContainer to="/jobs">
+          <NavItem eventKey={4}>Jobs</NavItem>
+        </LinkContainer>
+        <NavDropdown eventKey={5} title="Dropdown" id="basic-nav-dropdown">
+          <MenuItem eventKey={5.1}>Action</MenuItem>
+          <MenuItem eventKey={5.2}>Another action</MenuItem>
+          <MenuItem eventKey={5.3}>Something else here</MenuItem>
+          <MenuItem divider />
+          <MenuItem eventKey={5.3}>Separated link</MenuItem>
+        </NavDropdown>
+      </Nav>
     </Navbar>
   </div>
 );
