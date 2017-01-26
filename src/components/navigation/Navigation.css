@@ -1,16 +1,28 @@
-.navigation-bar {
-  background-color: #f39c12;
+.navbar-default .navbar-brand {
+  color: #f39c12;
+  font-weight: bold;
 }
 
-.navbar-inverse {
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+  color: #e67e22;
+}
+
+.navbar-default .navbar-nav > li > a {
+  color: #777;
+}
+
+.navbar-default .navbar-nav > li > a:hover {
+  color: #7f8c8d;
+}
+
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .active > a {
   background-image: none;
 }
 
-.navbar-inverse .navbar-brand, .navbar-inverse .navbar-nav > li > a {
-  color: #222;
-  text-shadow: none;
-}
-
-.navbar-brand {
-  font-weight: bold;
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  color: #f39c12;
 }
