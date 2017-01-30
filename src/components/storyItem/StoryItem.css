@@ -2,3 +2,9 @@
   list-style-type: none;
   padding: 5px;
 }
+
+.label-comments-link,
+.label-comments-link:hover {
+  text-decoration: none;
+  color: #fff;
+}
