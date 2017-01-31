@@ -1,7 +1,7 @@
 import React from 'react';
 import { Label } from 'react-bootstrap';
 import { Link } from 'react-router';
-import './StoryItem.css';
+import './CommentsLabel.css';
 
 const CommentsLabel = (props) => {
   if (typeof props.comments !== 'undefined' && props.comments.length !== 1) {
