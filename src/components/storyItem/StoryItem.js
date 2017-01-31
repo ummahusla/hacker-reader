@@ -39,7 +39,7 @@ class StoryItem extends Component {
         <ul className="storyitem-list">
           <li>
             <ScoreLabel score={storyItem.score}/>
-            <StoryUrl title={storyItem.title} url={storyItem.url}></StoryUrl>
+            <StoryUrl title={storyItem.title} url={storyItem.url}/>
             <AuthorLabel author={storyItem.by}/>
             <DateLabel date={storyItem.time}/>
             <CommentsLabel id={storyItem.id} comments={storyItem.kids}/>
