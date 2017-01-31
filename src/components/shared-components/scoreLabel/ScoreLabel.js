@@ -8,7 +8,7 @@ const ScoreLabel = (props) => {
 };
 
 ScoreLabel.propTypes = {
-  score: React.PropTypes.string
+  score: React.PropTypes.number
 };
 
 export default ScoreLabel;
