@@ -2,6 +2,7 @@ import React, { Component }  from 'react';
 import { Button, Label } from 'react-bootstrap';
 import moment from 'moment';
 import CommentsLabel from '../shared-components/commentsLabel/CommentsLabel';
+import ScoreLabel from '../shared-components/scoreLabel/ScoreLabel';
 import './StoryItem.css';
 
 import * as api from '../../helpers/api';
@@ -37,7 +38,7 @@ class StoryItem extends Component {
       <div>
         <ul className="storyitem-list">
           <li>
-            <i className="fa fa-caret-square-o-up" aria-hidden="true"></i> {storyItem.score}
+            <ScoreLabel score={storyItem.score}/>
             <Button href={storyItem.url} bsStyle="link">{storyItem.title}</Button>
             <Label>{storyItem.by}</Label>
             <Label>{moment(time).fromNow()}</Label>
