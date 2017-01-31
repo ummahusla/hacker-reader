@@ -11,7 +11,7 @@ const DateLabel = (props) => {
 };
 
 DateLabel.propTypes = {
-  date: React.PropTypes.string
+  date: React.PropTypes.date
 };
 
 export default DateLabel;
