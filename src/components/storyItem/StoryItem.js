@@ -34,11 +34,20 @@ class StoryItem extends Component {
 
     const storyItem = this.state.storyItems;
 
+    let isJob;
+    if(storyItem.type !== 'job') {
+      isJob = false;
+    } else {
+      isJob = true;
+    }
+
     return (
       <div>
         <ul className="storyitem-list">
           <li>
-            <ScoreLabel score={storyItem.score}/>
+            {!isJob &&
+              <ScoreLabel score={storyItem.score}/>
+            }
             <StoryUrl title={storyItem.title} url={storyItem.url}/>
             <AuthorLabel author={storyItem.by}/>
             <DateLabel date={storyItem.time}/>

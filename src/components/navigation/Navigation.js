@@ -26,13 +26,6 @@ const Navigation = () => (
           <LinkContainer to="/jobs">
             <NavItem eventKey={4}>Jobs</NavItem>
           </LinkContainer>
-          <NavDropdown eventKey={5} title="Dropdown" id="basic-nav-dropdown">
-            <MenuItem eventKey={5.1}>Action</MenuItem>
-            <MenuItem eventKey={5.2}>Another action</MenuItem>
-            <MenuItem eventKey={5.3}>Something else here</MenuItem>
-            <MenuItem divider />
-            <MenuItem eventKey={5.3}>Separated link</MenuItem>
-          </NavDropdown>
         </Nav>
       </Navbar.Collapse>
     </Navbar>
