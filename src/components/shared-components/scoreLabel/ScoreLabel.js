@@ -1,9 +1,10 @@
 import React from 'react';
+import { Label } from 'react-bootstrap';
 import './ScoreLabel.css';
 
 const ScoreLabel = (props) => {
   return (
-      <span><i className="fa fa-caret-square-o-up" aria-hidden="true"></i> {props.score}</span>
+      <Label><i className="fa fa-caret-square-o-up" aria-hidden="true"></i> {props.score}</Label>
   );
 };
 
