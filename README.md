@@ -1,4 +1,8 @@
-This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
+# [Hacker-Reader](https://github.com/ummahusla/Hacker-Reader)
+
+**Hacker-Reader** is a HackerNews clone based on React. Moreover, this project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
+
+___
 
 Below you will find some information on how to perform common tasks.<br>
 You can find the most recent version of this guide [here](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md).
