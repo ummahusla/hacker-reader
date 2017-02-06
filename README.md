@@ -2,6 +2,8 @@
 
 📰 **Hacker-Reader** is a [**HackerNews**](https://news.ycombinator.com/) clone based on **React.js** and it was bootstrapped with [**Create React App**](https://github.com/facebookincubator/create-react-app) and [**React Bootstrap**](https://react-bootstrap.github.io/).
 
+**Hacker-Reader** reads the official Hacker News [**Firebase APIs**](https://github.com/HackerNews/API) and renders the data in a fancy way. 
+
 ___
 
 **Demo**
