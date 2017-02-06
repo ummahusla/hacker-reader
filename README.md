@@ -1,6 +1,6 @@
 # [Hacker-Reader](https://github.com/ummahusla/Hacker-Reader)
 
-**Hacker-Reader** is a HackerNews clone based on React. Moreover, this project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
+📰 **Hacker-Reader** is a HackerNews clone based on React. Moreover, this project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 ___
 
