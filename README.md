@@ -2,6 +2,8 @@
 
 📰 **Hacker-Reader** is a HackerNews clone based on React. Moreover, this project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
+![](hacker-reader.png)
+
 ___
 
 Below you will find some information on how to perform common tasks.<br>
