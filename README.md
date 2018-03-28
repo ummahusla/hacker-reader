@@ -52,4 +52,4 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 
 ## License
 
-[**MIT License**](LICENSE). Copyright (c) 2017 Edvins Antonovs
+[**MIT License**](LICENSE). Copyright (c) 2018 Edvins Antonovs
